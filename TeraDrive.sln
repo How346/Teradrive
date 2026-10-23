@@ -1,0 +1,82 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeraDrive.App", "src\TeraDrive.App\TeraDrive.App.csproj", "{AEE4D58C-0133-54D7-B4E1-DC00103609C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeraDrive.Core", "src\TeraDrive.Core\TeraDrive.Core.csproj", "{F8D9F762-E6A6-5849-A9EB-A35A4007D823}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeraDrive.Cloud", "src\TeraDrive.Cloud\TeraDrive.Cloud.csproj", "{86BD3008-9B18-565D-AC95-AC636D4C98CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeraDrive.Cache", "src\TeraDrive.Cache\TeraDrive.Cache.csproj", "{46B6104A-2A23-589B-B383-BD427B1FEA51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeraDrive.Transfers", "src\TeraDrive.Transfers\TeraDrive.Transfers.csproj", "{7BBD59AB-35EF-595B-9C6A-BD0BC46D8EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeraDrive.VirtualDrive", "src\TeraDrive.VirtualDrive\TeraDrive.VirtualDrive.csproj", "{64E9D019-ADA2-547F-91A8-C4D9EC17E763}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeraDrive.Media", "src\TeraDrive.Media\TeraDrive.Media.csproj", "{E60C6156-5206-567B-952F-B96F145E8B9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeraDrive.Games", "src\TeraDrive.Games\TeraDrive.Games.csproj", "{88284D7D-B4BE-5645-984F-AD9DCCEB9E41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeraDrive.Core.Tests", "tests\TeraDrive.Core.Tests\TeraDrive.Core.Tests.csproj", "{343D7A7D-A484-5A54-BB4D-8F806D887F19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeraDrive.Cache.Tests", "tests\TeraDrive.Cache.Tests\TeraDrive.Cache.Tests.csproj", "{39F3A154-2B35-5D23-9714-35F570F81D81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeraDrive.Transfers.Tests", "tests\TeraDrive.Transfers.Tests\TeraDrive.Transfers.Tests.csproj", "{6E595D13-FE0D-56BE-B9BE-001ED1BD8F1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEE4D58C-0133-54D7-B4E1-DC00103609C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE4D58C-0133-54D7-B4E1-DC00103609C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE4D58C-0133-54D7-B4E1-DC00103609C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE4D58C-0133-54D7-B4E1-DC00103609C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8D9F762-E6A6-5849-A9EB-A35A4007D823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8D9F762-E6A6-5849-A9EB-A35A4007D823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8D9F762-E6A6-5849-A9EB-A35A4007D823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8D9F762-E6A6-5849-A9EB-A35A4007D823}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86BD3008-9B18-565D-AC95-AC636D4C98CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86BD3008-9B18-565D-AC95-AC636D4C98CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86BD3008-9B18-565D-AC95-AC636D4C98CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86BD3008-9B18-565D-AC95-AC636D4C98CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B6104A-2A23-589B-B383-BD427B1FEA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B6104A-2A23-589B-B383-BD427B1FEA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B6104A-2A23-589B-B383-BD427B1FEA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B6104A-2A23-589B-B383-BD427B1FEA51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BBD59AB-35EF-595B-9C6A-BD0BC46D8EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BBD59AB-35EF-595B-9C6A-BD0BC46D8EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BBD59AB-35EF-595B-9C6A-BD0BC46D8EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BBD59AB-35EF-595B-9C6A-BD0BC46D8EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64E9D019-ADA2-547F-91A8-C4D9EC17E763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E9D019-ADA2-547F-91A8-C4D9EC17E763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E9D019-ADA2-547F-91A8-C4D9EC17E763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E9D019-ADA2-547F-91A8-C4D9EC17E763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E60C6156-5206-567B-952F-B96F145E8B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E60C6156-5206-567B-952F-B96F145E8B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E60C6156-5206-567B-952F-B96F145E8B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E60C6156-5206-567B-952F-B96F145E8B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88284D7D-B4BE-5645-984F-AD9DCCEB9E41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88284D7D-B4BE-5645-984F-AD9DCCEB9E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88284D7D-B4BE-5645-984F-AD9DCCEB9E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88284D7D-B4BE-5645-984F-AD9DCCEB9E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{343D7A7D-A484-5A54-BB4D-8F806D887F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{343D7A7D-A484-5A54-BB4D-8F806D887F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{343D7A7D-A484-5A54-BB4D-8F806D887F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{343D7A7D-A484-5A54-BB4D-8F806D887F19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39F3A154-2B35-5D23-9714-35F570F81D81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F3A154-2B35-5D23-9714-35F570F81D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F3A154-2B35-5D23-9714-35F570F81D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39F3A154-2B35-5D23-9714-35F570F81D81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E595D13-FE0D-56BE-B9BE-001ED1BD8F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E595D13-FE0D-56BE-B9BE-001ED1BD8F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E595D13-FE0D-56BE-B9BE-001ED1BD8F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E595D13-FE0D-56BE-B9BE-001ED1BD8F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

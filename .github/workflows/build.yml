@@ -1,0 +1,59 @@
+name: Build
+
+on:
+  push:
+    branches: [main, master]
+    tags: ['v*']
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Restore
+        run: dotnet restore TeraDrive.sln
+
+      - name: Build (Release)
+        run: dotnet build TeraDrive.sln -c Release --no-restore
+
+      - name: Test
+        run: dotnet test TeraDrive.sln -c Release --no-build --logger "trx;LogFileName=results.trx"
+
+      - name: Publish (win-x64, self-contained, single file)
+        run: >
+          dotnet publish src/TeraDrive.App/TeraDrive.App.csproj -c Release -r win-x64 --self-contained true
+          -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o publish/app
+
+      - name: Package portable ZIP
+        shell: pwsh
+        run: ./scripts/publish.ps1 -PublishDir publish/app -Output artifacts/TeraDrive-win-x64-portable.zip
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: TeraDrive-win-x64-portable
+          path: artifacts/TeraDrive-win-x64-portable.zip
+          if-no-files-found: error
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: '**/TestResults/*.trx'
+          if-no-files-found: ignore

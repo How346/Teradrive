@@ -1,0 +1,15 @@
+bin/
+obj/
+publish/
+artifacts/
+.vs/
+*.user
+*.suo
+*.pfx
+*.snk
+*.pem
+*.key
+.env
+appsettings.Local.json
+TestResults/
+*.zip

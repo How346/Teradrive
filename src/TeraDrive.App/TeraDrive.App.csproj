@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>TeraDrive</AssemblyName>
+    <RootNamespace>TeraDrive.App</RootNamespace>
+    <ApplicationIcon>Assets\TeraDrive.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Assets\TeraDrive.ico" />
+    <ProjectReference Include="..\TeraDrive.Core\TeraDrive.Core.csproj" />
+    <ProjectReference Include="..\TeraDrive.Cloud\TeraDrive.Cloud.csproj" />
+    <ProjectReference Include="..\TeraDrive.Cache\TeraDrive.Cache.csproj" />
+    <ProjectReference Include="..\TeraDrive.Transfers\TeraDrive.Transfers.csproj" />
+    <ProjectReference Include="..\TeraDrive.VirtualDrive\TeraDrive.VirtualDrive.csproj" />
+    <ProjectReference Include="..\TeraDrive.Media\TeraDrive.Media.csproj" />
+    <ProjectReference Include="..\TeraDrive.Games\TeraDrive.Games.csproj" />
+  </ItemGroup>
+</Project>
