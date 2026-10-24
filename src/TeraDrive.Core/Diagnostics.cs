@@ -5,15 +5,15 @@ namespace TeraDrive.Core;
 
 public static partial class Redactor
 {
-    [GeneratedRegex(@"(?i)\b(password|passwd|pwd|token|jstoken|secret|cookie|ndus|authorization|api[_-]?key|refresh[_-]?token|access[_-]?token)\b\s*[=:]\s*[^\s,;&]+")]
+    [GeneratedRegex(@"(?i)\b(password|passwd|pwd|token|jstoken|secret|cookie|ndus|authorization|api[_-]?key|refresh[_-]?token|access[_-]?token)\b\s*[=:]\s*(?:Bearer\s+)?[^\s,;&]+")]
     private static partial Regex KeyValue();
     [GeneratedRegex(@"(?i)\bBearer\s+[A-Za-z0-9\-._~+/]+=*")]
     private static partial Regex Bearer();
 
     public static string Redact(string text)
     {
-        text = KeyValue().Replace(text, m => m.Groups[1].Value + "=[REDACTED]");
-        return Bearer().Replace(text, "Bearer [REDACTED]");
+        text = Bearer().Replace(text, "Bearer [REDACTED]");
+        return KeyValue().Replace(text, m => m.Groups[1].Value + "=[REDACTED]");
     }
 }
 
